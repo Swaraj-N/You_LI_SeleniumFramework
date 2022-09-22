@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.testNGTourismManagementScriptsTest.CreateAndBookSamePackageAndCheckCountTest">
+      <class name="org.testNGTourismManagementScriptsTest.Write_Us_CancellationTest">
         <methods>
-          <include name="bookPackageCheckCountIncreases"/>
+          <include name="CancellationTest"/>
           <include name="methodSetup"/>
           <include name="classSetup"/>
           <include name="classTearDown"/>
         </methods>
-      </class> <!-- org.testNGTourismManagementScriptsTest.CreateAndBookSamePackageAndCheckCountTest -->
+      </class> <!-- org.testNGTourismManagementScriptsTest.Write_Us_CancellationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

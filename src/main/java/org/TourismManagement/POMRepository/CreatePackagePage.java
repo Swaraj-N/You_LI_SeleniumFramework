@@ -47,6 +47,17 @@ public class CreatePackagePage {
 			ImageFIleBrowser.sendKeys(map.get(0).get("Image"));
 
 		}
+		public void CreatPackagedetails2(List<Map<String, String>> map,int random, WebDriverUtility wdu) {
+			PackageNameTextfield.sendKeys(map.get(2).get("Package_Name")+random);
+			PackageTypeTextfield.sendKeys(map.get(2).get("Package_Type"));
+			PackageLocationTextfield.sendKeys(map.get(2).get("Package_Location"));
+			PackagePriceTextfield.sendKeys(map.get(2).get("Package_Price")+random);
+			PackageFeaturesTextfield.sendKeys(map.get(2).get("Package_Features"));
+			wdu.scrollUsingJSE(CreatePackageButton);	
+			PackageDetailsTextfield.sendKeys(map.get(2).get("Package_Details"));
+			ImageFIleBrowser.sendKeys(map.get(2).get("Image"));
+		}
+
 
 		public void ScrollTillCreateButton(WebDriver driver, WebDriverUtility wdu) {
 			wdu.initializeJSE(driver);
