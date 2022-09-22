@@ -9,7 +9,8 @@ public class CommonPage {
 
 
 	private	String commonPageLink="//a[.='%s']";
-
+	//CommonPage cp=new CommonPage();
+	
 	private WebElement anylinkElement(WebDriver driver, String linkName)
 	{
 	String format = String.format(commonPageLink, linkName);

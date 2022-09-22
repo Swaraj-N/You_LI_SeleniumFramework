@@ -8,7 +8,6 @@ public enum WelcomePageLinks {
 	TERMSOFUSE("Terms of Use"),CONTACTUS("Contact Us"),
 	ENQUIRY(" Enquiry "),TOURISM("Tourism "),
 	VIEWMOREPACKAGES("View More Packages");
-
 	private String linkName;
 	private WelcomePageLinks(String linkName)
 	{

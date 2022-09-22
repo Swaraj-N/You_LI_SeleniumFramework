@@ -393,5 +393,9 @@ public class WebDriverUtility {
 	{
 		WebDriverWait wdw=new WebDriverWait(driver,Duration.ofSeconds(timeInSeconds));
 	}
+	public void selectByVisibleTextFromDropDown(String visibleText) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

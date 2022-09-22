@@ -31,6 +31,7 @@ public class UserHomePage {
 	public void clickOnWriteusMajorTab()
 	{
 		writeusMajorTab.click();	
+		
 	}
 	public void ScrollSpecifiedPackageName(WebDriver driver,WebDriverUtility wdu,String packageName)
 	{

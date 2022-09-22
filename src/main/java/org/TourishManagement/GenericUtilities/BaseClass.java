@@ -2,11 +2,14 @@
 package org.TourishManagement.GenericUtilities;
 
 import org.TourismManagement.POMRepository.AdminFunctionalitiesPage;
+
 import org.TourismManagement.POMRepository.AdminRemarkUpdateWindowPage;
 import org.TourismManagement.POMRepository.CommonPage;
 import org.TourismManagement.POMRepository.CreatePackagePage;
 import org.TourismManagement.POMRepository.EnquiryPage;
+import org.TourismManagement.POMRepository.IssueTicketsPage;
 import org.TourismManagement.POMRepository.ManageBookingPage;
+import org.TourismManagement.POMRepository.ManageIssuePage;
 import org.TourismManagement.POMRepository.PackageDetailsPage;
 import org.TourismManagement.POMRepository.UserHomePage;
 import org.TourismManagement.POMRepository.WelcomePage;
@@ -41,6 +44,12 @@ public class BaseClass {
 	public static WebDriver sdriver;
 	public static JavaOperationUtilities sjou;
 	protected EnquiryPage ep;
+	protected String Refunddesc;
+	protected String Canceldesc;
+	protected String visibleText1;
+	protected String visibleText2;
+	protected IssueTicketsPage itp;
+	protected ManageIssuePage mip;
 	//@Parameters(value="browser")
 	@BeforeClass
 	public void classSetup()
@@ -63,6 +72,10 @@ public class BaseClass {
 		APass = Pu.getValueFromPropertyFile(IConstantPath.PROPERTY_PATH, "AdminPassword");
 		remark = Pu.getValueFromPropertyFile(IConstantPath.PROPERTY_PATH, "remark");
 		comment = Pu.getValueFromPropertyFile(IConstantPath.PROPERTY_PATH, "comment");
+		Refunddesc=Pu.getValueFromPropertyFile(IConstantPath.PROPERTY_PATH, "Refunddesc");
+		Canceldesc=Pu.getValueFromPropertyFile(IConstantPath.PROPERTY_PATH, "Canceldesc");
+		visibleText1=Pu.getValueFromPropertyFile(IConstantPath.PROPERTY_PATH, "visibleText1");
+		visibleText2=Pu.getValueFromPropertyFile(IConstantPath.PROPERTY_PATH, "visibleText2");
 		longtime = (long)jou.convertStringIntoAnyDatatype(time, DataTypes.LONG);
 		driver = wdu.commonOperation(Browser, Url, longtime);
 		sdriver = driver;
@@ -73,6 +86,8 @@ public class BaseClass {
 		afp=new AdminFunctionalitiesPage(driver);
 		eu=new ExcelUtilities();
 		eu.openExcel(IConstantPath.EXCEL_PATH);
+//		Refunddesc=RandomNumber+Refunddesc;
+//		Canceldesc=RandomNumber+Canceldesc;
 	}
 
 	@BeforeMethod
@@ -88,6 +103,8 @@ public class BaseClass {
 		aruw=new AdminRemarkUpdateWindowPage(driver);
 		cp=new CommonPage();
 		ep=new EnquiryPage(driver);
+		itp=new IssueTicketsPage(driver);
+		mip=new ManageIssuePage(driver);
 	}
 
 
@@ -95,7 +112,7 @@ public class BaseClass {
 	public void classTearDown()
 	{
 		eu.closeExcel();
-		wdu.closeTheBrowser(driver);
+		//wdu.closeTheBrowser(driver);
 	}
 
 }
