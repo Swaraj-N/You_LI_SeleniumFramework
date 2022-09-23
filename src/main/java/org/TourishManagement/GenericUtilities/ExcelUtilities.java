@@ -23,8 +23,8 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
  */
 public class ExcelUtilities {
 
-	FileInputStream fis = null;
-	FileOutputStream fos = null;
+	FileInputStream fis;
+	FileOutputStream fos;
 	Workbook wb;
 	Sheet sheet;
 

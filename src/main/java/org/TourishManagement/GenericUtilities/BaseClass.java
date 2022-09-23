@@ -86,8 +86,6 @@ public class BaseClass {
 		afp=new AdminFunctionalitiesPage(driver);
 		eu=new ExcelUtilities();
 		eu.openExcel(IConstantPath.EXCEL_PATH);
-//		Refunddesc=RandomNumber+Refunddesc;
-//		Canceldesc=RandomNumber+Canceldesc;
 	}
 
 	@BeforeMethod
@@ -112,7 +110,7 @@ public class BaseClass {
 	public void classTearDown()
 	{
 		eu.closeExcel();
-		//wdu.closeTheBrowser(driver);
+		wdu.closeTheBrowser(driver);
 	}
 
 }

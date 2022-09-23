@@ -1,12 +1,11 @@
 package org.testNGTourismManagementScriptsTest;
 
-import org.TourishManagement.GenericUtilities.WelcomePageLinks;
-import org.TourismManagement.POMRepository.CommonPage;
+import org.TourishManagement.GenericUtilities.BaseClass;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 //import org.tms.genericUtility.BaseClass;
 
-public class Write_Us_CancellationTest extends org.TourishManagement.GenericUtilities.BaseClass{
+public class Write_Us_CancellationTest extends BaseClass{
 	@Test
 	public void CancellationTest() {
 		wp.userSignInAction(UUser, UPassword, wdu, driver);
