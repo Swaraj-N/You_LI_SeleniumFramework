@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.testNGTourismManagementScriptsTest.Write_Us_CancellationTest">
+      <class name="org.testNGTourismManagementScriptsTest.LoginToApplicationWithMultipleUsersTest">
         <methods>
-          <include name="CancellationTest"/>
           <include name="methodSetup"/>
+          <include name="loginWithMultipleUsers"/>
           <include name="classSetup"/>
           <include name="classTearDown"/>
         </methods>
-      </class> <!-- org.testNGTourismManagementScriptsTest.Write_Us_CancellationTest -->
+      </class> <!-- org.testNGTourismManagementScriptsTest.LoginToApplicationWithMultipleUsersTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
