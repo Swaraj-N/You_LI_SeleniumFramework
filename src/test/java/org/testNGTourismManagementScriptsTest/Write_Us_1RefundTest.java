@@ -1,12 +1,9 @@
 package org.testNGTourismManagementScriptsTest;
 
-import org.TourishManagement.GenericUtilities.WelcomePageLinks;
-import org.TourismManagement.POMRepository.CommonPage;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.AddHasFullPageScreenshot;
+import org.TourishManagement.GenericUtilities.BaseClass;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
-public class Write_Us_1RefundTest extends org.TourishManagement.GenericUtilities.BaseClass{
+public class Write_Us_1RefundTest extends BaseClass{
 	@Test
 	public  void write_Us_RefundTest(){
 		//CommonPage cp=new CommonPage();

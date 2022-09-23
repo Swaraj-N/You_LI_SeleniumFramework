@@ -23,8 +23,8 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
  */
 public class ExcelUtilities {
 
-	FileInputStream fis = null;
-	FileOutputStream fos = null;
+	FileInputStream fis;
+	FileOutputStream fos;
 	Workbook wb;
 	Sheet sheet;
 
@@ -188,6 +188,9 @@ public class ExcelUtilities {
 		return ValidateText;
 	}
 
+	/**
+	 * This method is used to fetch multiple data from excel for DataProvider
+	 */
 	public String[][] getDataFromDataProvider(String dSheetname)
 	{
 		ExcelUtilities eu=new ExcelUtilities();
