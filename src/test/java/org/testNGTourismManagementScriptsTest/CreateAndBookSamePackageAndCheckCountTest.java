@@ -12,6 +12,7 @@ public class CreateAndBookSamePackageAndCheckCountTest extends BaseClass {
 	@Test
 	public void bookPackageCheckCountIncreases()
 	{
+		//push//a
 		List<Map<String, String>> map = eu.getDataFromExcelInList("CreatePackage");
 		wp.AdminLoginAction(AUser, APass);
 		afp.ManageBookingTab();
