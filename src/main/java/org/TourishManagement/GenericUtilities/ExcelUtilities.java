@@ -167,13 +167,13 @@ public class ExcelUtilities {
 		sheet=wb.getSheet(sheetName);
 		List<Map<String, String>> list=new ArrayList<>();
 		DataFormatter df=new DataFormatter();
-		for(int k=1;k<sheet.getRow(0).getLastCellNum();k++)
+		for(int i=1;i<sheet.getRow(0).getLastCellNum();i++)
 		{
 
 			Map<String, String> map=new HashMap<>();
-			for(int i=0;i<=sheet.getLastRowNum();i++)
+			for(int j=0;j<=sheet.getLastRowNum();j++)
 			{
-				map.put(df.formatCellValue(sheet.getRow(i).getCell(0)), df.formatCellValue(sheet.getRow(i).getCell(k)));
+				map.put(df.formatCellValue(sheet.getRow(j).getCell(0)), df.formatCellValue(sheet.getRow(j).getCell(i)));
 			}
 			list.add(map);
 		}
