@@ -33,7 +33,7 @@ public class ListenerImplementation implements ITestListener  {
 		System.out.println(Thread.currentThread().getId());
 		String screenShotpath = new WebDriverUtility().screenShot(BaseClass.sdriver);
 		test.addScreenCaptureFromBase64String(screenShotpath);
-		//Use Below Statement is used to take Sreenshot and save in local directory
+		//Use Below Statement is used to take Screenshot and save in local directory
 		//new WebDriverUtility().screenShot(BaseClass.sdriver, BaseClass.sjou, result.getMethod().getMethodName());		
 	}
 
